@@ -1,0 +1,6 @@
+/* Fotos finais escolhidas pela cliente; manter o enquadramento homologado. */
+.logic-card:nth-child(1) .logic-card__thumb-header--approved img { object-position:50% 53%; }
+.logic-card:nth-child(2) .logic-card__thumb-header--approved img { object-position:50% 50%; }
+.logic-card:nth-child(3) .logic-card__thumb-header--approved img { object-position:50% 60%; }
+.logic-card:hover .logic-card__thumb-header--approved img { transform:none; }
+html[data-color-preview="gradient"] .logic-card .logic-card__thumb-header--approved::after { display:none; }

@@ -1,0 +1,109 @@
+/* ==========================================================================
+   ELARA · Página de Vendas — Design System
+   Paleta oficial: Bordô #3A0C0F · Vinho #640909 · Ocre #CA9650 · Areia #FAF6F0
+   ========================================================================== */
+:root {
+  --bordeaux: #3A0C0F;
+  --bordeaux-deep: #1E0507;
+  --bordeaux-mid: #4A1317;
+  --wine: #640909;
+  --earth: #3A241C;
+  --gold: #CA9650;
+  --gold-bright: #E4B877;
+  --gold-pale: #F1DDB8;
+  --gold-glow: rgba(202, 150, 80, 0.22);
+  --paper: #FAF6F0;
+  --paper-warm: #F2E9DE;
+  --paper-deep: #E9DCCB;
+  --ink: #1C1514;
+  --ink-soft: #4A3C38;
+  --ink-muted: #7A6C66;
+  --line: rgba(202, 150, 80, 0.32);
+  --line-dark: rgba(58, 12, 15, 0.12);
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-cinzel: "Cinzel", Georgia, serif;
+  --font-body: "Plus Jakarta Sans", -apple-system, sans-serif;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --wrap: min(1180px, 88vw);
+  --wrap-narrow: min(680px, 88vw);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto;
+  overflow-x: clip;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: 0;
+  background: none;
+  color: inherit;
+}
+
+strong,
+b {
+  font-weight: 650;
+  color: var(--bordeaux);
+}
+
+.path-card strong,
+.path-card b {
+  font-weight: 650;
+  color: var(--wine);
+}
+
+.path-card--dark strong,
+.path-card--dark b {
+  color: var(--gold-bright);
+  font-weight: 600;
+}
+
+.logic-card__problem strong {
+  color: var(--bordeaux);
+  font-weight: 650;
+}
+
+.logic-card__answer strong {
+  color: #FFF3DC;
+  font-weight: 600;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}

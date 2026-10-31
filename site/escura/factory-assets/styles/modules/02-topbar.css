@@ -1,0 +1,58 @@
+/* ==========================================================================
+   NAV FIXA
+   ========================================================================== */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 12px;
+  padding: 18px max(24px, calc((100vw - 1240px) / 2 + 24px));
+  transition: background 0.5s, padding 0.5s, backdrop-filter 0.5s;
+}
+
+.topbar.is-scrolled {
+  background: rgba(30, 5, 7, 0.78);
+  backdrop-filter: blur(14px) saturate(140%);
+  padding: 12px max(24px, calc((100vw - 1240px) / 2 + 24px));
+  border-bottom: 1px solid rgba(202, 150, 80, 0.15);
+}
+
+.topbar__brand {
+  font-family: var(--font-cinzel);
+  letter-spacing: 0.34em;
+  color: var(--paper);
+  text-decoration: none;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topbar__mark {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.topbar .btn {
+  padding: 13px 26px;
+  min-height: 46px;
+  font-size: 0.74rem;
+}
+
+.topbar__progress {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 1px;
+  width: 100%;
+  transform-origin: left;
+  transform: scaleX(0);
+  background: linear-gradient(90deg, var(--gold), var(--gold-bright));
+}

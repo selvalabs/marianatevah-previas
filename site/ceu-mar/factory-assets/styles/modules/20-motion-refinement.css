@@ -1,0 +1,36 @@
+/* Only JS marks below-the-fold targets. Never hide HTML by default. */
+[data-scroll-reveal="pending"] { opacity: 0; }
+.kit-card__outgoing { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+.kit-card__img { position: relative; transition: transform .65s cubic-bezier(.22, 1, .36, 1); }
+.kit-card__badge { z-index: 2; }
+.kit-card__figure:hover .kit-card__outgoing { transform: scale(1.03); }
+
+/* Keep the movement at the edges and the reading plane calm. */
+.voices .lead { color: var(--paper); }
+.voices .h-display em { color: var(--gold-pale); }
+.voices .eyebrow { color: #fff0d4; }
+.voices .btn--ghost { color: var(--gold-pale); background: rgba(34, 7, 9, .28); }
+.voices__bg { width: 100%; height: 100%; mask-image: linear-gradient(90deg, #000 0%, #0002 32%, #0002 60%, #000 100%); }
+.voices__bg use:first-child { opacity: .16; }
+.voices__bg use:last-child { opacity: .11; }
+.voices > .bordeaux-canvas { opacity: .65; mask-image: radial-gradient(ellipse at center, #0002, #000 72%); }
+@media (prefers-reduced-motion: no-preference) {
+  .voices__bg { animation: voices-breathe 14s ease-in-out infinite alternate; }
+}
+@keyframes voices-breathe { from { transform: translate3d(0, 6px, 0) scale(1); } to { transform: translate3d(-8px, -6px, 0) scale(1.025); } }
+@media (max-width: 600px) {
+  .voices__bg { mask-image: linear-gradient(90deg, #0009, #0002 38%, #0007); }
+  .voices__bg use:first-child { opacity: .12; }
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-scroll-reveal="pending"] { opacity: 1; }
+  .kit-card__figure:hover :is(.kit-card__img, .kit-card__outgoing) { transform: none; }
+}
+
+/* Original files remain in place; only the selected preset reveals variants. */
+.palette-asset--gradient { display: none !important; }
+html[data-color-preview="gradient"] .palette-asset--original { display: none !important; }
+html[data-color-preview="gradient"] .palette-asset--gradient { display: block !important; }
+@media (max-width: 960px) and (prefers-reduced-motion: no-preference) {
+  html[data-color-preview="gradient"] .hero__mandala-luz { animation: spin 90s linear infinite; }
+}

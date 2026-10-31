@@ -1,0 +1,9 @@
+.path-card .path-card__thumb-header--presencial { height: auto; min-height: 170px; aspect-ratio: 2.55; }
+.path-card .path-card__thumb-header--presencial img {
+  object-position: 50% 65%;
+  filter: saturate(.78) sepia(.10) contrast(.97);
+}
+html[data-color-preview="gradient"] .path-card .path-card__thumb-header--presencial::after {
+  background: linear-gradient(180deg, rgba(237, 215, 179, .04), rgba(86, 52, 71, .12));
+}
+.path-card:hover .path-card__thumb-header--presencial img { transform: none; }

@@ -1,0 +1,10 @@
+import {execFileSync} from 'node:child_process';
+const git=(...args)=>execFileSync('git',args,{encoding:'utf8'}).trim();
+const tag=process.env.RELEASE_TAG;
+if(!/^v\d+\.\d+\.\d+(?:-[a-z0-9.-]+)?$/.test(tag||''))throw Error('Explicit version tag required');
+if(git('cat-file','-t','refs/tags/'+tag)!=='tag')throw Error('Annotated release tag required');
+const sha=git('rev-parse','refs/tags/'+tag+'^{commit}');
+if(git('rev-parse','HEAD')!==sha)throw Error('Checkout must match tag');
+execFileSync('git',['merge-base','--is-ancestor',sha,'origin/main']);
+if(git('status','--porcelain'))throw Error('Release tree must be clean');
+console.log('Verified release '+tag+' / '+sha);

@@ -1,0 +1,32 @@
+.factory-section { display: contents; }
+.factory-skip { position:fixed;top:-5rem;left:1rem;z-index:9999;padding:1rem;background:white;color:#152b26; }
+.factory-skip:focus { top:1rem; }
+.section { padding-block:var(--factory-spacing); }
+.btn { border-radius:var(--factory-radius); }
+html[data-theme="studio"] { --bordeaux:#183d34;--bordeaux-deep:#102a24;--bordeaux-mid:#214e42;--wine:#2f6a59;--earth:#234539;--gold-bright:#b9d9a7;--gold-pale:#d9ebcd;--gold-glow:rgba(47,106,89,.2);--paper-warm:#eaf0e8;--paper-deep:#dbe5d7;--ink-soft:#345047;--ink-muted:#60786d;--line:rgba(47,106,89,.3);--line-dark:rgba(20,43,38,.15); }
+html[data-theme="studio"] .hero { background:linear-gradient(140deg,#edf4e8,#dce9df);color:var(--ink); }
+html[data-theme="studio"] .hero__headline,
+html[data-theme="studio"] .hero__text,
+html[data-theme="studio"] .hero__care,
+html[data-theme="studio"] .hero__name { color:var(--ink);text-shadow:none; }
+html[data-theme="studio"] .hero__name { font-size:clamp(2rem,6vw,5rem);letter-spacing:-.05em; }
+html[data-theme="studio"] .hero__headline { letter-spacing:-.035em;font-size:clamp(2rem,3vw,3.4rem); }
+html[data-theme="studio"] .topbar { background:var(--paper);border-bottom:1px solid var(--line-dark); }
+html[data-theme="studio"] .topbar__brand { color:var(--ink); }
+html[data-theme="studio"] .hero__care strong { color:var(--wine); }
+html[data-theme="studio"] .hero__sig { color:var(--ink-soft); }
+html[data-theme="studio"] .hero__mandala-wrap,
+html[data-theme="studio"] .ornament-divider,
+html[data-theme="studio"] .offer__bg-mandala { opacity:.16; }
+html[data-theme="studio"] .h-display { letter-spacing:-.04em; }
+html[data-theme="studio"] .btn--gold { background:var(--gold);color:#fff;border-color:var(--gold);box-shadow:none; }
+html[data-theme="studio"] .path-card,
+html[data-theme="studio"] .logic-card,
+html[data-theme="studio"] .offer-card { border-radius:16px; }
+[data-factory-effects]:not([data-factory-effects~="particles"]) canvas { display:none; }
+[data-factory-effects]:not([data-factory-effects~="reveals"]) .spin-slow,
+[data-factory-effects]:not([data-factory-effects~="reveals"]) .spin-rev { animation:none!important; }
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after { animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important; }
+  [data-scroll-reveal] { opacity:1!important;translate:none!important; }
+}

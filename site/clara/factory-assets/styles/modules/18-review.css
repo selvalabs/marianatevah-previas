@@ -1,0 +1,64 @@
+/* Leitura, teclado e layout independentes das animações. */
+:root { --gold-text: #80602e; }
+html { scroll-padding-top: 86px; }
+main:focus { outline: none; }
+.skip-link {
+  position: fixed;
+  top: 10px;
+  left: 12px;
+  z-index: 2000;
+  padding: 12px 18px;
+  color: var(--bordeaux-deep);
+  background: var(--paper);
+  transform: translateY(-160%);
+}
+.skip-link:focus { transform: none; }
+:is(a, button, summary):focus-visible {
+  outline: 3px solid #1479b8;
+  outline-offset: 4px;
+  box-shadow: 0 0 0 2px var(--paper);
+}
+.btn { max-width: 100%; text-align: center; }
+.btn svg { flex-shrink: 0; }
+:is(.logic, .paths, .author, .inside, .deliver, .faq) :is(.eyebrow, .h-display em, .signature),
+.inside__labels b { color: var(--gold-text); }
+.activation-photo__tag, .logic-card__num, .eyebrow--gold,
+.veils__title em, .veil-statement__numeral, .deliver__idx {
+  color: var(--gold-text);
+  opacity: 1;
+}
+.offer .lead { color: rgba(250, 246, 240, .88); }
+.mirror-portal__col-head--before .mirror-portal__eyebrow { color: var(--ink-soft); }
+.hero__grid > *, .kit-card > *, .path-card { min-width: 0; }
+.hero__care-highlight { white-space: normal; }
+.photo-break__card { position: relative; width: 100%; max-width: 100%; }
+.photo-break__overlay { inset: 0; min-width: 0; }
+.photo-break__quote { max-width: 100%; overflow-wrap: break-word; }
+.faq__q { min-height: 56px; }
+.kit-card__thumb { min-width: 48px; min-height: 48px; }
+img { height: auto; }
+.hero__portrait-img, .author__photo img, .path-card__thumb-header img,
+.logic-card__thumb-header img, .photo-break__card > img,
+.kit-card__img, .kit-card__thumb img { height: 100%; }
+@media (max-width: 960px), (max-height: 759px) {
+  .diff__panel { height: auto; min-height: 0; max-height: none; padding-block: 72px; }
+}
+@media (max-width: 960px) {
+  body::after { display: none; }
+  .hero__portrait { filter: drop-shadow(0 12px 24px rgba(0,0,0,.35)); }
+}
+@media (max-width: 600px) {
+  .photo-break__overlay { padding: 18px; }
+  .photo-break__quote { font-size: clamp(1.1rem, 5vw, 1.4rem); }
+  .photo-break__author { font-size: .68rem; letter-spacing: .12em; }
+  .hero__actions .btn { font-size: .75rem; padding-inline: 14px; letter-spacing: .08em; }
+  .topbar { padding-inline: 12px; }
+  .eyebrow { letter-spacing: .15em; }
+  .eyebrow::before, .eyebrow::after { width: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  canvas { display: none; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .reveal { opacity: 1; transform: none; }
+}

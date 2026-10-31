@@ -1,0 +1,71 @@
+/* Issue 32: refinements approved from the client's screenshots. */
+.offer-card--soft {
+  border:1px solid #c6a16a99;
+  border-radius:14px;
+  background:linear-gradient(145deg,#371924,#654055);
+  box-shadow:0 24px 60px #160b1429,inset 0 0 0 7px #d9b97c08;
+  overflow:hidden;
+}
+.offer-card--soft::before { content:""; position:absolute; inset:8px; border:1px solid #dec18d33; border-radius:8px; pointer-events:none; }
+.offer-card--soft .offer-card__content { padding:clamp(44px,6vw,76px) clamp(24px,4vw,48px); }
+.offer-card--soft .offer-card__label { color:#e4c998; }
+.offer-card--soft .offer-card__why { color:#f0dfc8; }
+#campaign-title > span { color:#f4d69e; white-space:nowrap; }
+.deliver__icon img { object-position:50% 35%; }
+.deliver__item--kit .deliver__icon img { object-position:50% 50%; }
+
+/* Two equal cover sets form a seamless loop; no return journey or blank gap. */
+.phone-courses { display:flex; flex-direction:column; }
+.phone-courses__bar { flex:none; }
+.phone-courses__viewport { flex:1; min-height:0; overflow-y:auto; padding:12px 14px 0; }
+.phone-courses__viewport:focus-visible { outline:2px solid #986d3f; outline-offset:-3px; }
+.phone-courses__viewport:focus-visible .phone-courses__track { animation-play-state:paused; }
+.phone-courses__track { display:block; padding:0; animation:none; will-change:auto; }
+.phone-courses__set { display:flex; flex-direction:column; gap:12px; padding-bottom:12px; }
+.phone-courses__set[aria-hidden="true"] { display:none; }
+.is-reel-ready .phone-courses__viewport { overflow:hidden; }
+.is-reel-ready .phone-courses__track { animation:phone-cover-loop 44s linear infinite; will-change:transform; }
+.is-reel-ready .phone-courses__set[aria-hidden="true"] { display:flex; }
+.phone-courses__set img { display:block; width:100%; flex:none; }
+@keyframes phone-cover-loop { from { transform:translateY(0); } to { transform:translateY(-50%); } }
+.ie-edit-mode .phone-courses__track,.is-motion-paused .phone-courses__track { animation-play-state:paused!important; }
+
+/* The computer uses genuine source images with a readable course/title pairing. */
+.lesson-preview { display:block; }
+/* Taller display with the existing laptop width; captures keep their proportions. */
+#por-dentro .device-laptop__screen { aspect-ratio:4/3; }
+.lesson-preview__bar, .lesson-slide .lesson-preview__caption { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+.lesson-reel__slides { position:absolute; inset:0; overflow:hidden; }
+.lesson-slide { position:absolute; inset:0; display:block; margin:0; opacity:0; transition:opacity .8s ease-in-out; pointer-events:none; }
+.lesson-slide.is-active { opacity:1; z-index:1; pointer-events:auto; }
+/* CSS crops keep originals intact; the overview fills the screen with course cards. */
+.lesson-capture { position:absolute; inset:0; min-width:0; min-height:0; overflow:hidden; display:flex; align-items:center; justify-content:flex-start; container-type:size; background:#f7f8fa; }
+.lesson-capture__window { position:relative; overflow:hidden; flex:none; width:max(100cqw,calc(100cqh * var(--capture-fit))); aspect-ratio:var(--capture-ratio); }
+/* Show complete course rows/list within the existing tall 4:3 screen. */
+.lesson-slide--contain .lesson-capture__window { width:100cqw; }
+.lesson-slide .lesson-capture .device-laptop__img { position:absolute; width:var(--capture-width); height:auto; max-width:none; top:var(--capture-top); left:var(--capture-left); object-fit:initial; background:transparent; }
+.lesson-slide .lesson-preview__caption { background:#fffaf3; }
+.lesson-slide:nth-child(2) .device-laptop__img { background:#f7f8fa; }
+.lesson-preview__caption > span { color:#78563d; }
+.lesson-reel__controls { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:8px 14px; margin:24px auto 0; color:#694155; font-size:.78rem; }
+.lesson-reel__controls[hidden],.lesson-reel__controls [hidden] { display:none!important; }
+.lesson-reel__controls button { min-height:44px; padding:9px 15px; border:1px solid #b894625e; border-radius:22px; background:#fffcf7; color:#573348; font:inherit; cursor:pointer; }
+.lesson-reel__controls button:hover { background:#efe4d7; }
+.lesson-reel__controls button:focus-visible { outline:3px solid #986d3f; outline-offset:3px; }
+.lesson-reel__controls [data-lesson-counter] { min-width:34px; font-variant-numeric:tabular-nums; text-align:center; }
+@media(max-width:600px) {
+  .offer-card--soft .offer-card__content { padding:40px 20px; }
+  .offer-card--soft .offer-card__price-val { font-size:clamp(2.7rem,12vw,3.6rem); }
+  .phone-courses__viewport { padding:8px 6px 0; }
+  .phone-courses__set { gap:8px; padding-bottom:8px; }
+  .lesson-preview__bar { height:22px; }
+  .lesson-reel__slides { top:0; }
+
+  .lesson-reel__controls { margin-top:22px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .phone-courses__track,.is-reel-ready .phone-courses__track { animation:none; transform:none; will-change:auto; }
+  .phone-courses__viewport,.is-reel-ready .phone-courses__viewport { overflow-y:auto; }
+  .phone-courses__set[aria-hidden="true"],.is-reel-ready .phone-courses__set[aria-hidden="true"] { display:none; }
+  .lesson-slide { transition:none; transform:none; }
+}

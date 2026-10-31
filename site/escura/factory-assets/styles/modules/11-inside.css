@@ -1,0 +1,280 @@
+/* ==========================================================================
+   09 · MEMBERKIT
+   ========================================================================== */
+.inside {
+  background: var(--paper);
+}
+
+.inside__stage {
+  position: relative;
+  height: clamp(420px, 54vw, 680px);
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.device-laptop {
+  position: absolute;
+  left: 2%;
+  top: 4%;
+  width: 78%;
+  z-index: 1;
+}
+
+.device-laptop__screen {
+  --screen-bezel: clamp(6px, .8vw, 10px);
+  aspect-ratio: 16 / 10;
+  border-radius: 16px 16px 2px 2px;
+  background: #0d0608;
+  padding: var(--screen-bezel);
+  box-shadow: 0 0 0 1px rgba(228, 184, 119, 0.45), 0 35px 80px -25px rgba(58, 12, 15, 0.65);
+  position: relative;
+  overflow: hidden;
+}
+
+.device-laptop__screen::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #1a1a24;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 3px rgba(100, 180, 255, 0.5);
+  z-index: 5;
+}
+
+.device-laptop__img {
+  position: absolute;
+  inset: var(--screen-bezel);
+  width: calc(100% - 2 * var(--screen-bezel));
+  height: calc(100% - 2 * var(--screen-bezel));
+  object-fit: cover;
+  object-position: left top;
+  display: block;
+  border-radius: 6px;
+}
+
+.device-laptop__base {
+  position: relative;
+  height: 16px;
+  margin: 0 -4%;
+  border-radius: 2px 2px 14px 14px;
+  background: linear-gradient(180deg, #dfd2c0 0%, #baaa93 45%, #887762 100%);
+  box-shadow: 0 35px 80px -15px rgba(58, 12, 15, 0.5), 0 15px 30px -10px rgba(0, 0, 0, 0.35);
+}
+
+.device-laptop__base::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 5px;
+  background: #5b4b3b;
+  border-radius: 0 0 6px 6px;
+}
+
+.device-phone {
+  position: absolute;
+  right: 2%;
+  bottom: 0;
+  --phone-radius: clamp(22px, 2.8vw, 36px);
+  width: 23%;
+  max-width: 238px;
+  border-radius: var(--phone-radius);
+  padding: clamp(5px, .7vw, 8px);
+  background: linear-gradient(145deg, #3d2419, #150406);
+  border: 2px solid rgba(228, 184, 119, 0.65);
+  box-shadow: 0 35px 80px -10px rgba(0, 0, 0, 0.85), 0 0 35px rgba(228, 184, 119, 0.25);
+  z-index: 3;
+}
+
+.device-phone__screen {
+  aspect-ratio: 9 / 19.5;
+  border-radius: calc(var(--phone-radius) - 8px);
+  overflow: hidden;
+  position: relative;
+  background: #000;
+}
+
+.device-phone__screen::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24%;
+  max-width: 60px;
+  height: clamp(7px, 1vw, 12px);
+  background: #000;
+  border-radius: 10px;
+  z-index: 10;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.device-phone__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+  display: block;
+}
+
+.ui {
+  height: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #FBF7F1;
+  display: grid;
+  grid-template-columns: 22% 1fr;
+  font-size: clamp(0.42rem, 0.75vw, 0.72rem);
+}
+
+.ui__side {
+  background: var(--bordeaux);
+  color: var(--paper);
+  padding: 10% 9%;
+  display: flex;
+  flex-direction: column;
+  gap: 9%;
+}
+
+.ui__side b {
+  font-family: var(--font-cinzel);
+  letter-spacing: 0.24em;
+  color: var(--gold-bright);
+  font-weight: 400;
+}
+
+.ui__side span {
+  opacity: 0.7;
+}
+
+.ui__side span.on {
+  opacity: 1;
+  color: var(--gold-bright);
+}
+
+.ui__main {
+  padding: 4% 4%;
+  display: flex;
+  flex-direction: column;
+  gap: 4%;
+}
+
+.ui__hero {
+  flex: 0 0 34%;
+  border-radius: 6px;
+  background: linear-gradient(120deg, rgba(30, 5, 7, 0.9), rgba(100, 9, 9, 0.55)), none center / cover;
+  color: var(--paper);
+  padding: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.ui__hero strong {
+  font-family: var(--font-display);
+  font-size: 1.8em;
+  font-weight: 500;
+}
+
+.ui__row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3%;
+  flex: 1;
+}
+
+.ui__tile {
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ui__tile::after {
+  content: attr(data-label);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 8% 8% 6%;
+  background: linear-gradient(transparent, rgba(20, 3, 5, 0.9));
+  color: #fff;
+  font-size: 0.95em;
+}
+
+.ui--phone {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  border-radius: 22px;
+}
+
+.ui--phone .ui__side {
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 14% 9% 8%;
+}
+
+.ui--phone .ui__main {
+  gap: 3%;
+}
+
+.ui__lesson {
+  display: flex;
+  gap: 8%;
+  align-items: center;
+  padding: 6%;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  font-size: 1.15em;
+}
+
+.ui__lesson i {
+  flex: 0 0 22%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+.inside__labels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.inside__labels div {
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+}
+
+.inside__labels b {
+  display: block;
+  font-family: var(--font-cinzel);
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  color: var(--gold);
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.inside__closing {
+  text-align: center;
+  margin-top: 40px;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--bordeaux);
+}

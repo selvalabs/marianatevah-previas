@@ -1,0 +1,25 @@
+{
+  "base": "/marianatevah-previas/",
+  "builtAt": "2026-10-31T17:54:50.446Z",
+  "portalSourceCommit": "a222855e82b799ecb02d5be198fe58d82db30298",
+  "versions": [
+    {
+      "slug": "clara",
+      "name": "Tema claro · versão A",
+      "contentCommit": "606a72eb8818d04c51969043c6adf36baa101a17",
+      "path": "/marianatevah-previas/clara/"
+    },
+    {
+      "slug": "escura",
+      "name": "Tema escuro · versão B",
+      "contentCommit": "13bfdb1883693eb193ec4accae5de29d1f6dc607",
+      "path": "/marianatevah-previas/escura/"
+    },
+    {
+      "slug": "ceu-mar",
+      "name": "Céu e mar · pôr do sol",
+      "contentCommit": "0bb2a36da3d8f67b839a01bc58d7b782de68daf3",
+      "path": "/marianatevah-previas/ceu-mar/"
+    }
+  ]
+}

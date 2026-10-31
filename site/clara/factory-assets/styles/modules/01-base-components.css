@@ -1,0 +1,218 @@
+.wrap {
+  width: var(--wrap);
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.wrap-narrow {
+  width: var(--wrap-narrow);
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Grão de papel sutil sobre toda a página */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- Tipografia utilitária ---------- */
+.eyebrow {
+  font-family: var(--font-cinzel);
+  font-size: 0.72rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--gold);
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.eyebrow::before,
+.eyebrow::after {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold));
+}
+
+.eyebrow::after {
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+.h-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.06;
+  letter-spacing: -0.01em;
+  font-size: clamp(2.3rem, 5vw, 4.4rem);
+}
+
+.h-display em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.lead {
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  line-height: 1.8;
+  color: var(--ink-soft);
+}
+
+.signature {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  color: var(--gold);
+  letter-spacing: 0.01em;
+}
+
+.section {
+  position: relative;
+  padding: clamp(70px, 8vw, 120px) 0;
+  overflow: hidden;
+}
+
+.section--dark {
+  background: var(--bordeaux);
+  color: var(--paper);
+}
+
+.section--dark .lead {
+  color: rgba(250, 246, 240, 0.78);
+}
+
+.section--warm {
+  background: var(--paper-warm);
+}
+
+.section-head {
+  text-align: center;
+  margin: 0 auto clamp(40px, 5vw, 64px);
+  max-width: 780px;
+}
+
+.section-head .lead {
+  margin-top: 18px;
+}
+
+.ornament-divider {
+  display: block;
+  width: min(320px, 72vw);
+  max-width: 350px;
+  height: auto;
+  margin: 0 auto 32px;
+  filter: drop-shadow(0 4px 14px rgba(202, 150, 80, 0.25));
+  pointer-events: none;
+  user-select: none;
+}
+
+.section-head .ornament-divider {
+  margin: 24px auto 0;
+}
+
+.compare__header .ornament-divider {
+  margin: 24px auto 0;
+}
+
+/* ---------- Botões ---------- */
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 19px 38px;
+  font-family: var(--font-cinzel);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 999px;
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform 0.5s var(--ease-out), box-shadow 0.5s var(--ease-out), color 0.4s;
+  min-height: 56px;
+}
+
+.btn--gold {
+  color: var(--bordeaux-deep);
+  background: linear-gradient(120deg, #B9843F 0%, var(--gold-bright) 45%, #F6E2BC 55%, var(--gold) 100%);
+  background-size: 220% 100%;
+  box-shadow: 0 14px 40px -12px rgba(202, 150, 80, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  animation: btnSheen 6s ease-in-out infinite;
+}
+
+.btn--gold:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 50px -14px rgba(202, 150, 80, 0.85);
+}
+
+.btn--ghost {
+  color: var(--gold-bright);
+  border: 1px solid var(--line);
+  background: rgba(202, 150, 80, 0.06);
+}
+
+.btn--ghost:hover {
+  background: rgba(202, 150, 80, 0.14);
+  transform: translateY(-2px);
+}
+
+.btn--ghost-dark {
+  color: var(--bordeaux);
+  border: 1px solid rgba(58, 12, 15, 0.25);
+}
+
+.btn--ghost-dark:hover {
+  background: rgba(58, 12, 15, 0.05);
+  transform: translateY(-2px);
+}
+
+.btn svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.4s var(--ease-out);
+}
+
+.btn:hover svg {
+  transform: translateX(4px);
+}
+
+.btn__label { min-width: 0; }
+.btn__keep { white-space: nowrap; }
+
+.btn__text-short {
+  display: none;
+}
+
+@keyframes btnSheen {
+
+  0%,
+  100% {
+    background-position: 100% 0;
+  }
+
+  50% {
+    background-position: 0 0;
+  }
+}
