@@ -1,0 +1,27 @@
+/* Approved permanent brand palette, active in the initial HTML and offline exports. */
+html[data-color-preview="gradient"] {
+  --preview-start: var(--bordeaux);
+  --preview-end: #925f7b;
+  --preview-start-rgb: 58, 12, 15;
+  --preview-end-rgb: 146, 95, 123;
+  --preview-deep: #220709;
+  --preview-ink: #330b0d;
+  --preview-accent: #6f485d;
+  --preview-gradient: linear-gradient(135deg, var(--bordeaux) 0%, #925f7b 100%);
+  --bordeaux: var(--preview-ink); --bordeaux-deep: var(--preview-deep); --bordeaux-mid: var(--preview-start); --wine: var(--preview-accent);
+}
+html[data-color-preview="gradient"] :is(.hero, .diff, .voices, .campaign, .offer, .footer, .roses-stage, .path-card--dark, .logic-card__answer, .bonus-card, .bonus-card__cover, .campaign__one) { background: var(--preview-gradient); }
+html[data-color-preview="gradient"] .topbar.is-scrolled { background: linear-gradient(135deg, rgba(var(--preview-start-rgb), .94), rgba(var(--preview-end-rgb), .94)); }
+html[data-color-preview="gradient"] :is(.voice__print, .author__photo, .campaign__avatar-frame, .activation-photo__frame, .path-card__thumb-header, .logic-card__thumb-header, .path-duo__visual, .roses-portal) { background: var(--preview-gradient); }
+html[data-color-preview="gradient"] .photo-break__overlay { background: linear-gradient(180deg, rgba(var(--preview-start-rgb), .05), rgba(var(--preview-start-rgb), .78)); }
+html[data-color-preview="gradient"] .closing-ritual__overlay { background: linear-gradient(135deg, rgba(var(--preview-start-rgb), .64), rgba(var(--preview-end-rgb), .56)); }
+html[data-color-preview="gradient"] :is(.path-card__thumb-header, .logic-card__thumb-header)::after { background: linear-gradient(180deg, transparent 40%, rgba(var(--preview-start-rgb), .65)); }
+html[data-color-preview="gradient"] #g-diff stop:first-child { stop-color: var(--preview-end); }
+html[data-color-preview="gradient"] #g-diff stop:last-child { stop-color: var(--preview-start); }
+html[data-color-preview="gradient"] #comparacao { --wine: var(--preview-start); --ink: var(--preview-ink); }
+html[data-color-preview="gradient"] #comparacao .mirror-portal { background: var(--preview-gradient); }
+html[data-color-preview="gradient"] #comparacao .fluid-art::after { background: linear-gradient(90deg, #eadfce, #eadfce26 22%, transparent 48%, rgba(var(--preview-start-rgb), .4) 76%, rgba(var(--preview-start-rgb), .7)); }
+@media (max-width: 600px) {
+  html[data-color-preview="gradient"] #comparacao .mirror-portal { background: linear-gradient(to bottom, #eee3d5 0, #eee3d5 var(--stable-before-height, 260px), transparent var(--stable-before-height, 260px)), var(--preview-gradient); }
+  html[data-color-preview="gradient"] #comparacao .fluid-art::after { background: linear-gradient(90deg, rgba(var(--preview-start-rgb), .94), rgba(var(--preview-start-rgb), .7) 60%, rgba(var(--preview-end-rgb), .35)); }
+}

@@ -1,0 +1,597 @@
+/* ==========================================================================
+   RESPONSIVO
+   ========================================================================== */
+@media (max-width: 960px) {
+
+  .hero__grid,
+  .roses-stage__body,
+  .author__grid,
+  .kit-card {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 100svh;
+    max-height: none;
+    padding: 86px 18px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: visible;
+    overflow-x: clip;
+    box-sizing: border-box;
+    position: relative;
+    border-bottom: 1px solid rgba(228, 184, 119, 0.45);
+  }
+
+  /* Faixa de quebra de dobra com ouro refinado na base da hero */
+  .hero::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, rgba(228, 184, 119, 0.25) 15%, var(--gold-bright) 50%, rgba(228, 184, 119, 0.25) 85%, transparent 100%);
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .hero__grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    gap: 0;
+    margin: 0 auto;
+  }
+
+  /* Permite ordenar individualmente o texto, o visual e o card */
+  .hero__copy {
+    display: contents;
+  }
+
+  .hero__name {
+    order: 1;
+    font-size: clamp(2.8rem, 11vw, 3.8rem);
+    letter-spacing: 0.2em;
+    margin-bottom: 12px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero__headline {
+    order: 2;
+    font-size: clamp(1.4rem, 4.8vw, 1.75rem);
+    line-height: 1.35;
+    margin-bottom: 16px;
+    text-align: center;
+    width: 100%;
+    max-width: 580px;
+  }
+
+  .hero__text {
+    order: 3;
+    font-size: 0.98rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 540px;
+  }
+
+  .hero__actions {
+    order: 4;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto 16px;
+    position: relative;
+    z-index: 5;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    max-width: 340px;
+    padding: 16px 20px;
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
+    min-height: 52px;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.35;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+  }
+
+  /* Imagem logo em seguida com dimensões imponentes e base na dobra */
+  .hero__visual {
+    order: 5;
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    height: clamp(380px, 52vh, 460px);
+    margin: 6px auto 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  .hero__mandala-wrap {
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    transform: translate(-50%, -50%);
+    width: min(340px, 92vw);
+    aspect-ratio: 1;
+  }
+
+  .hero__portrait {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+
+  .hero__portrait-img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: bottom center;
+    display: block;
+    vertical-align: bottom;
+  }
+
+  /* Card sobrepondo a imagem com acabamento editorial de vidro bordeaux e borda dourada */
+  .hero__care {
+    order: 6;
+    position: relative;
+    z-index: 6;
+    margin: -64px auto 0;
+    width: calc(100% - 20px);
+    max-width: 490px;
+    background: rgba(38, 10, 13, 0.90);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(228, 184, 119, 0.42);
+    border-radius: 12px;
+    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.6), 0 0 24px rgba(202, 150, 80, 0.14);
+    padding: clamp(18px, 4vw, 24px) clamp(14px, 3.5vw, 22px);
+    text-align: center;
+    color: var(--paper);
+    font-family: var(--font-display);
+    font-size: clamp(1.12rem, 3.6vw, 1.3rem);
+    line-height: 1.38;
+    box-sizing: border-box;
+  }
+
+  .hero__care-l1,
+  .hero__care-l2 {
+    display: block;
+  }
+
+  .hero__care-highlight {
+    display: block;
+    font-size: clamp(1.14rem, 3.7vw, 1.32rem);
+    font-weight: 600;
+    font-style: italic;
+    color: var(--gold-bright);
+    white-space: normal;
+    margin-top: 3px;
+  }
+
+  .hero__sig {
+    order: 7;
+    text-align: center;
+    margin: 22px auto 32px;
+    position: relative;
+    z-index: 6;
+    width: 100%;
+    color: var(--gold-pale);
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: clamp(1.24rem, 4vw, 1.48rem);
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+  }
+
+  .logic__grid,
+  .paths__grid,
+  .paths__duo,
+  .campaign__cards,
+  .release__list,
+  .deliver__list,
+  .inside__labels {
+    grid-template-columns: 1fr;
+  }
+
+  .logic__pin,
+  .compare__pin {
+    min-height: auto;
+  }
+
+  .diff__panel {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: clamp(54px, 7.5vh, 72px) clamp(16px, 4.5vw, 22px) clamp(18px, 2.5vh, 28px) !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+  }
+
+  .diff__line1 {
+    font-size: clamp(1.28rem, 4vw, 1.8rem) !important;
+    line-height: 1.22 !important;
+    color: #FFFFFF !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75) !important;
+  }
+
+  .diff__strike {
+    height: 3px !important;
+    background: var(--gold-bright) !important;
+    box-shadow: 0 0 12px var(--gold-bright) !important;
+  }
+
+  .diff__line2 {
+    font-size: clamp(1.42rem, 4.6vw, 2.15rem) !important;
+    line-height: 1.16 !important;
+    margin-top: clamp(6px, 1.2vh, 12px) !important;
+    text-shadow: 0 0 18px rgba(228, 184, 119, 0.45) !important;
+  }
+
+  .diff__body {
+    font-size: clamp(1rem, 2.7vw, 1.08rem) !important;
+    line-height: 1.48 !important;
+    margin-top: clamp(10px, 1.6vh, 18px) !important;
+    color: rgba(255, 250, 243, 0.96) !important;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8) !important;
+    max-width: 520px !important;
+  }
+
+  .diff__body p+p {
+    margin-top: clamp(6px, 1vh, 10px) !important;
+  }
+
+  .diff__close {
+    font-size: clamp(0.96rem, 3vw, 1.18rem) !important;
+    line-height: 1.35 !important;
+    margin-top: clamp(10px, 1.6vh, 16px) !important;
+    color: var(--gold-pale) !important;
+    text-shadow: 0 0 12px rgba(202, 150, 80, 0.35) !important;
+  }
+
+  .diff__mandala-rose {
+    width: min(420px, 92vw) !important;
+    opacity: 0.22 !important;
+  }
+
+  .kit-card {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding: 30px 24px;
+  }
+
+  .deliver__item--kit {
+    grid-template-columns: 56px 1fr;
+  }
+
+  .deliver__thumb {
+    grid-column: 2;
+    margin-top: 6px;
+  }
+
+  .photo-break__card {
+    aspect-ratio: 16 / 10;
+    max-height: none;
+  }
+
+  .voices__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .roses-stage__body {
+    gap: 30px;
+    text-align: center;
+  }
+
+  .roses-portal {
+    width: min(76vw, 340px);
+  }
+
+  .roses-copy__name span {
+    left: 50%;
+    transform: translate(-50%, 60%);
+  }
+
+  .roses-copy__name span.is-active {
+    transform: translate(-50%, 0);
+  }
+
+  .roses-copy__name span.is-past {
+    transform: translate(-50%, -60%);
+  }
+
+  .roses-copy p {
+    margin: 0 auto;
+  }
+
+  .roses-stage__inner {
+    padding-top: 84px;
+  }
+
+  .deliver__item {
+    grid-template-columns: 60px 1fr;
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .deliver__item--kit {
+    grid-template-columns: 60px 1fr;
+  }
+
+  .deliver__thumb {
+    grid-column: 2;
+    margin-top: 10px;
+    width: 72px;
+    height: 72px;
+  }
+
+  .campaign__gold-vault {
+    position: relative;
+    background: linear-gradient(145deg, #371924, #654055) !important;
+    border: 1px solid #c6a16a99 !important;
+    border-radius: 16px !important;
+    box-shadow: 0 24px 60px #160b1429, inset 0 0 0 7px #d9b97c08 !important;
+    padding: clamp(28px, 6vw, 40px) clamp(16px, 4vw, 24px) !important;
+  }
+
+  .campaign__one {
+    padding: 26px 20px;
+  }
+
+  .campaign__one-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 18px;
+  }
+
+  .campaign__one-visual--avatar {
+    margin: 0 auto;
+  }
+
+  .campaign__trail-head {
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+  }
+
+  .author__sticky-wrap {
+    position: relative;
+    top: auto;
+    max-width: 340px;
+    margin: 0 auto 30px;
+  }
+
+  .author__portrait {
+    max-width: 340px;
+  }
+
+  .path-card__thumb-header {
+    width: calc(100% + 52px);
+    margin: 0 -26px 20px -26px;
+  }
+
+  .closing-ritual {
+    padding: 56px 20px;
+  }
+
+  .inside__stage {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .device-laptop,
+  .device-phone {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+  }
+
+  .device-laptop {
+    width: 100%;
+  }
+
+  .device-phone {
+    width: 56%;
+    max-width: 218px;
+  }
+
+  /* O Portal do Espelho & Véus no Mobile */
+  .mirror-portal {
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .mirror-portal__header {
+    display: none;
+  }
+
+  .mirror-pair {
+    grid-template-columns: 1fr;
+    border: 1px solid rgba(202, 150, 80, 0.28);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(58, 12, 15, 0.05);
+  }
+
+  .mirror-pair__nexus {
+    display: none;
+  }
+
+  .mirror-pair__side {
+    padding: 22px 24px;
+  }
+
+  .mirror-pair__side--before {
+    border-bottom: 1px dashed rgba(202, 150, 80, 0.35);
+  }
+
+  .veil-statement {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 26px 24px;
+  }
+
+  .veil-statement__numeral {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .voices__grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    margin: 0 auto;
+    gap: 34px;
+  }
+
+  .voice:nth-child(even) {
+    margin-top: 0;
+  }
+
+  .voice h3 {
+    font-size: 1.18rem;
+    min-height: auto;
+    text-align: center;
+  }
+
+  .voice__print {
+    max-width: 280px;
+    margin: 0 auto;
+    aspect-ratio: 9 / 13;
+  }
+
+  .offer-card {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .offer-card__content {
+    padding: 64px 26px 56px;
+  }
+
+  .topbar,
+  .topbar.is-scrolled {
+    padding: 10px 16px;
+  }
+
+  .topbar__brand {
+    font-size: 0.92rem;
+    letter-spacing: 0.22em;
+    gap: 8px;
+  }
+
+  .topbar__mark {
+    width: 26px;
+    height: 26px;
+  }
+
+  .topbar .btn {
+    padding: 8px 12px;
+    min-height: 48px;
+    height: auto;
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    white-space: normal;
+    gap: 6px;
+    border-radius: 999px;
+    flex-shrink: 0;
+  }
+
+  .topbar .btn svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .btn__text-full {
+    display: none;
+  }
+
+  .btn__text-short {
+    display: inline;
+  }
+
+  .btn {
+    padding: 16px 24px;
+    letter-spacing: 0.12em;
+  }
+
+  .activation p {
+    font-size: 1.04rem;
+    line-height: 1.85;
+    margin-bottom: 20px;
+  }
+
+  .activation-parchment {
+    padding: 32px 20px;
+    margin: 36px auto 30px;
+  }
+
+  .parchment__item {
+    gap: 12px;
+  }
+
+  .logic-card {
+    padding: 0 20px 24px;
+  }
+
+  .logic-card__thumb-header {
+    width: calc(100% + 40px);
+    margin: 0 -20px 20px -20px;
+    height: 190px;
+  }
+
+  .logic-card h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .scrub-words .w {
+    opacity: 1;
+  }
+}

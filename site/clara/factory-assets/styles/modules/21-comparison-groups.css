@@ -1,0 +1,65 @@
+/* Two editorial pages, three complete before/after pairs on each page. */
+#comparacao .compare__head { margin-inline: auto; text-align: center; }
+#comparacao.travessia-grouped .mirror-portal { min-height: 0; border: 1px solid #c79b62; }
+#comparacao.travessia-grouped .mirror-portal::before { inset: 0; background: linear-gradient(90deg, #f0e8dc 0%, #eee3d5 43%, #eee3d500 54%); }
+#comparacao.travessia-grouped .mirror-portal__header,
+#comparacao.travessia-grouped .mirror-pair { display: grid; grid-template-columns: 47% 6% 47%; }
+#comparacao.travessia-grouped .mirror-portal__col-head { display: block; grid-row: auto; padding-top: 30px; padding-bottom: 18px; }
+#comparacao.travessia-grouped .mirror-portal__col-title { margin: 0; font-size: clamp(26px, 2.4vw, 34px); }
+#comparacao.travessia-grouped .comparison-page { position: absolute; inset: 0 0 auto; display: grid; grid-template-rows: var(--group-row-1, auto) var(--group-row-2, auto) var(--group-row-3, auto); }
+#comparacao.travessia-grouped .comparison-page[hidden] { display: none; }
+#comparacao.travessia-grouped .mirror-pair { position: relative; inset: auto; min-height: 0; align-items: center; }
+#comparacao.travessia-grouped .mirror-pair + .mirror-pair { border-top: 1px solid #c79b6230; }
+#comparacao.travessia-grouped .mirror-pair__side { min-height: 0; padding-top: 18px; padding-bottom: 18px; }
+#comparacao.travessia-grouped .mirror-pair__side > p { font-size: clamp(23px, 2vw, 28px); line-height: 1.2; overflow-wrap: normal; hyphens: auto; }
+#comparacao.travessia-grouped .pair-tabs { width: min(360px, 100%); gap: 16px; }
+#comparacao.travessia-grouped .pair-tab { min-width: 90px; flex: 1; }
+@media (max-width: 600px) {
+  #comparacao.travessia-grouped .mirror-portal { background: var(--wine); margin-inline: -10px; }
+  #comparacao.travessia-grouped .mirror-portal::before { display: block; inset: 0; }
+  #comparacao.travessia-grouped .mirror-portal::after { display: none; }
+  #comparacao.travessia-grouped .mirror-portal__header,
+  #comparacao.travessia-grouped .mirror-pair { grid-template-columns: 49% 2% 49%; }
+  #comparacao.travessia-grouped .mirror-portal__col-head,
+  #comparacao.travessia-grouped .mirror-pair__side { padding: 14px 12px; background: none; }
+  #comparacao.travessia-grouped .mirror-portal__col-head--after,
+  #comparacao.travessia-grouped .mirror-pair__side--after { padding-left: 12px; padding-right: 26px; }
+  #comparacao.travessia-grouped .mirror-portal__col-title { font-size: 19px; line-height: 1.12; }
+  #comparacao.travessia-grouped .mirror-pair__side > p { font-size: 18px; line-height: 1.22; }
+  #comparacao.travessia-grouped .mirror-portal > .fluid-art { top: 0; bottom: var(--controls-height, 68px); left: 50%; width: 50%; opacity: .18; mask-image: none; }
+  #comparacao.travessia-grouped .mirror-portal > .fluid-art::after { background: none; }
+  #comparacao.travessia-grouped .rose-vine { width: 20px; right: 2px; }
+  #comparacao.travessia-grouped .comparison-controls { padding: 12px; }
+}
+@media (max-width: 360px) {
+  #comparacao.travessia-grouped .mirror-pair__side > p { font-size: 18px; }
+  #comparacao.travessia-grouped .mirror-portal__col-title { font-size: 18px; }
+  #comparacao.travessia-grouped .mirror-portal__col-head--after,
+  #comparacao.travessia-grouped .mirror-pair__side--after { padding-right: 20px; }
+  #comparacao.travessia-grouped .rose-vine { width: 18px; }
+}
+html[data-color-preview="gradient"] #comparacao.travessia-grouped .mirror-portal { background: var(--preview-gradient); }
+
+/* Controls belong to the composition, with no numbered white footer. */
+#comparacao.travessia-grouped .mirror-portal__pairs { height: calc(var(--stable-pair-height, 420px) + 44px); }
+#comparacao.travessia-grouped .comparison-controls { position: absolute; z-index: 3; bottom: 0; left: calc(75% - 44px); width: 88px; height: 44px; padding: 0; border: 0; background: none; gap: 0; }
+#comparacao.travessia-grouped .pair-tabs { width: 88px; height: 44px; gap: 0; }
+#comparacao.travessia-grouped .pair-tabs::before,
+#comparacao.travessia-grouped .pair-progress,
+#comparacao.travessia-grouped .pair-indicator { display: none; }
+#comparacao.travessia-grouped .pair-tab { display: grid; place-items: center; width: 44px; min-width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%; }
+#comparacao.travessia-grouped .pair-tab::before { content: ''; width: 7px; height: 7px; border: 1px solid #efd4a3; border-radius: 50%; background: transparent; transition: background-color .25s, box-shadow .25s; }
+#comparacao.travessia-grouped .pair-tab[aria-selected="true"]::before { background: #efd4a3; box-shadow: 0 0 0 3px #c79b6228; }
+#comparacao.travessia-grouped .pair-tab:focus-visible { outline: 2px solid #d0a365; outline-offset: -5px; }
+#comparacao.travessia-grouped .comparison-control-label { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) {
+  #comparacao.travessia-grouped .pair-tab::before { transition: none; }
+}
+
+/* The animated silk precedes the left column; the center is a quiet color fade. */
+@media (min-width: 601px) {
+  #comparacao.travessia-grouped .mirror-portal > .fluid-art { left: 0; width: clamp(84px, 11vw, 150px); opacity: 1; mask-image: linear-gradient(90deg, #000 0%, #000 58%, transparent 100%); }
+  #comparacao.travessia-grouped .mirror-portal > .fluid-art::after { background: linear-gradient(90deg, transparent, #eee3d533 50%, #eee3d5 100%); }
+  #comparacao.travessia-grouped .mirror-portal__col-head--before,
+  #comparacao.travessia-grouped .mirror-pair__side--before { padding-left: clamp(112px, 13vw, 184px); }
+}

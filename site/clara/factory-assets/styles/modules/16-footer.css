@@ -1,0 +1,44 @@
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.footer {
+  background: var(--bordeaux-deep);
+  color: rgba(250, 246, 240, 0.6);
+  padding: 70px 0 40px;
+  text-align: center;
+  font-size: 0.86rem;
+}
+
+.footer__brand {
+  font-family: var(--font-cinzel);
+  letter-spacing: 0.4em;
+  font-size: 1.6rem;
+  color: var(--gold-bright);
+  margin-bottom: 14px;
+}
+
+.footer__note {
+  max-width: 640px;
+  margin: 22px auto 0;
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: rgba(250, 246, 240, 0.75);
+}
+
+/* ---------- Reveal genérico ---------- */
+.reveal {
+  opacity: 1;
+}
+
+
+.footer__signature {
+  white-space:nowrap;
+  font-size:clamp(.625rem, 3vw, .86rem);
+  letter-spacing:0;
+  line-height:1.6;
+}
+
+.footer__disclaimer { max-width:960px; text-wrap:balance; }
+@media(max-width:600px) {
+ .footer__disclaimer { max-width:none; font-size:clamp(.5rem, 2.55vw, .8rem); line-height:1.75; }
+}

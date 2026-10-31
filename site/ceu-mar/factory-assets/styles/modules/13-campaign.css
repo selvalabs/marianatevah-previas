@@ -1,0 +1,374 @@
+/* ==========================================================================
+   11 · BÔNUS DE CAMPANHA — BLACK ROSE (contorno dourado suave)
+   ========================================================================== */
+.campaign {
+  background: radial-gradient(100% 70% at 50% 0%, #4B0F14 0%, var(--bordeaux-deep) 70%);
+  color: var(--paper);
+  position: relative;
+}
+
+.campaign__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.campaign .section-head h2 {
+  color: var(--paper);
+}
+
+/* Fita / Badge de Black Rose no topo da seção */
+.bf-ribbon {
+  width: min(92%, 400px);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  padding: 18px 12px;
+  border-radius: 999px;
+  background: linear-gradient(120deg, #B9843F 0%, var(--gold-bright) 45%, #F6E2BC 55%, var(--gold) 100%);
+  background-size: 220% 100%;
+  animation: btnSheen 6s ease-in-out infinite;
+  color: var(--bordeaux-deep);
+  font-family: var(--font-cinzel);
+  font-size: clamp(.78rem, 3.05vw, 1.14rem);
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  box-shadow: 0 10px 30px rgba(202, 150, 80, 0.45);
+  margin-bottom: 24px;
+}
+
+.bf-ribbon__tag {
+  text-transform: uppercase;
+  font-size: 1.08em;
+  white-space: nowrap;
+}
+
+.bf-ribbon__sep {
+  display: none;
+}
+
+.bf-ribbon__text {
+  letter-spacing: .045em;
+  display: grid;
+  gap: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1em;
+  line-height: 1.6;
+  max-width: 48em;
+}
+
+.bf-ribbon__text > span { display:block; white-space:nowrap; }
+
+/* Quadro dos bônus na mesma linguagem suave do investimento */
+.campaign__gold-vault {
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: clamp(56px, 7vw, 84px) clamp(30px, 5vw, 64px) clamp(48px, 6vw, 70px);
+  background: linear-gradient(145deg, #371924, #654055);
+  border: 1px solid #c6a16a99;
+  border-radius: 14px;
+  box-shadow: 0 24px 60px #160b1429, inset 0 0 0 7px #d9b97c08;
+  overflow: hidden;
+}
+
+.campaign__gold-vault::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid #dec18d33;
+  border-radius: 8px;
+  pointer-events: none;
+}
+.campaign__gold-vault > * { position: relative; z-index: 1; }
+.campaign-name, #campaign-title > em { display: inline-block; white-space: nowrap; }
+
+.campaign__gold-header {
+  margin-bottom: 36px;
+}
+
+.campaign__gold-badge-wrap {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.campaign__gold-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: 100%;
+  line-height: 1.6;
+  padding: 6px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--gold-bright);
+  color: var(--gold-bright);
+  font-family: var(--font-cinzel);
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
+  font-weight: 700;
+  background: rgba(228, 184, 119, 0.14);
+  box-shadow: 0 0 20px rgba(228, 184, 119, 0.2);
+}
+
+.campaign__badge-star { flex: 0 0 auto; line-height: 1; }
+.campaign__badge-text { min-width: 0; text-wrap: balance; }
+
+.campaign__trail-head {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.campaign__trail-head svg {
+  width: 64px;
+  height: 64px;
+  color: var(--gold-bright);
+  flex: 0 0 64px;
+}
+
+.campaign__trail-head > div { width:100%; }
+
+.campaign__trail-head h3 {
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+  color: var(--gold-bright);
+  line-height: 1.15;
+  margin: 0 0 6px;
+}
+
+.campaign__trail-head p {
+  color: rgba(250, 246, 240, 0.82);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Os 3 Cards de Bônus em Lingotes Dourados */
+.campaign__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.bonus-card {
+  position: relative;
+  padding: 32px 26px;
+  border-radius: 8px;
+  background: linear-gradient(160deg, rgba(78, 14, 18, 0.85), rgba(24, 3, 5, 0.95));
+  border: 1px solid rgba(228, 184, 119, 0.45);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition: transform 0.4s var(--ease-out), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.bonus-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold-bright);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(228, 184, 119, 0.35);
+}
+
+.bonus-badge {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+  text-align: center;
+  font-family: var(--font-cinzel);
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  font-weight: 700;
+  color: var(--gold-bright);
+  border: 1px solid rgba(228, 184, 119, 0.5);
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(228, 184, 119, 0.12);
+  margin-bottom: 16px;
+}
+
+.bonus-card__cover {
+  aspect-ratio: 16 / 11;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 50% 45%, #6a141b, #1b0306);
+  border: 1px solid rgba(228, 184, 119, 0.45);
+  box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.75), 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+.bonus-card__cover img {
+  width: 82%;
+  height: 82%;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.7)) drop-shadow(0 0 18px rgba(228, 184, 119, 0.35));
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+.bonus-card:hover .bonus-card__cover img {
+  transform: scale(1.08);
+}
+
+.bonus-card__cover svg {
+  width: 48%;
+  color: var(--gold-bright);
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+}
+
+.bonus-card h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.55rem;
+  color: var(--paper);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.bonus-card p {
+  font-size: 0.94rem;
+  color: rgba(250, 246, 240, 0.78);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.bonus-card p strong {
+  color: var(--gold-bright);
+  font-weight: 600;
+}
+
+/* Bônus 04: Encontro Individual com Alejandra (A Joia da Coroa da Black Friday) */
+.campaign__one {
+  margin-top: 32px;
+  border-radius: 8px;
+  border: 1.5px solid var(--gold-bright);
+  background: linear-gradient(110deg, rgba(228, 184, 119, 0.18) 0%, rgba(70, 14, 18, 0.88) 50%, rgba(26, 3, 6, 0.96) 100%);
+  padding: 34px 42px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 45px rgba(228, 184, 119, 0.22), 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.campaign__one-seal {
+  width: min(100%, 420px);
+  margin-inline: auto;
+  font-family: var(--font-cinzel);
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--bordeaux-deep);
+  background: linear-gradient(120deg, #B9843F 0%, var(--gold-bright) 45%, #F6E2BC 55%, var(--gold) 100%);
+  padding: 18px 24px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: 100%;
+  text-align: center;
+  line-height: 1.65;
+  margin-bottom: 22px;
+  box-shadow: 0 6px 18px rgba(202, 150, 80, 0.4);
+}
+
+.campaign__one-seal-text { min-width:0; display:grid; gap:2px; }
+.campaign__one-seal-text > span { display:block; white-space:nowrap; }
+
+.campaign__one-inner {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.campaign__one-visual--avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.campaign__avatar-frame {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--gold-bright);
+  box-shadow: 0 0 35px rgba(228, 184, 119, 0.5);
+  background: #1A0406;
+}
+
+.campaign__avatar-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.campaign__avatar-mandala {
+  width: 36px;
+  height: 36px;
+  color: var(--gold-bright);
+}
+
+.campaign__one-body h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.8rem, 2.6vw, 2.2rem);
+  color: var(--gold-bright);
+  margin: 0 0 10px;
+  line-height: 1.2;
+}
+
+.campaign__one-body p {
+  color: rgba(250, 246, 240, 0.82);
+  font-size: 1.02rem;
+  line-height: 1.6;
+  margin: 0 0 8px;
+}
+
+.campaign__one-body p:last-child {
+  margin-bottom: 0;
+}
+
+.campaign__one-body p strong {
+  color: var(--gold-bright);
+}
+
+.campaign__one-body .campaign__one-availability {
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  line-height: 1.45;
+  margin: 16px 0;
+}
+
+.campaign__cta {
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+@media (max-width: 600px) {
+  .campaign__gold-badge { padding:8px 12px; gap:8px; font-size:.65rem; letter-spacing:.14em; }
+}
+
+.campaign .section-head > .lead { margin-top:32px; }
+.campaign .campaign__deadline { margin-top:44px; }
+.campaign .campaign-clock { margin-top:28px; }
+@media (max-width:600px) {
+  .campaign__one-seal { padding:18px 8px; gap:6px; font-size:clamp(.72rem, 3.3vw, .95rem); letter-spacing:0; }
+}
+
+/* Campaign names sit above the gold seals rather than inside them. */
+.campaign__ribbon-heading, .campaign__session-heading {
+  font-family:var(--font-cinzel); font-weight:600;
+  font-size:clamp(.9rem, 1.4vw, 1.1rem); letter-spacing:.18em;
+  line-height:1.4; color:var(--gold-bright); text-align:center;
+  white-space:nowrap; margin-bottom:12px;
+}

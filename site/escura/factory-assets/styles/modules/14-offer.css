@@ -1,0 +1,249 @@
+/* ==========================================================================
+   12 · INVESTIMENTO
+   ========================================================================== */
+.offer {
+  background: var(--bordeaux-deep);
+  color: var(--paper);
+}
+
+.offer__bg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(1100px, 150vw);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  color: var(--gold);
+  opacity: 0.16;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.offer__bg-mandala {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(1000px, 140vw);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+  pointer-events: none;
+  opacity: 0.22;
+  mix-blend-mode: screen;
+  z-index: 0;
+}
+
+.offer .section-head h2 {
+  color: var(--paper);
+}
+
+#offer-title > em {
+  display: block;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.offer-card {
+  position: relative;
+  max-width: 630px;
+  margin: 0 auto;
+  border-radius: 0;
+  overflow: visible;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.offer-card__frame-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  z-index: 1;
+  pointer-events: none;
+  filter: contrast(1.05) saturate(1.08) drop-shadow(0 35px 80px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 50px rgba(228, 184, 119, 0.25));
+}
+
+.offer-card__content {
+  position: relative;
+  z-index: 2;
+  padding: clamp(80px, 10vw, 106px) clamp(44px, 7vw, 68px) clamp(72px, 9vw, 96px);
+  text-align: center;
+  background: transparent;
+}
+
+.offer-card__label {
+  font-family: var(--font-cinzel);
+  letter-spacing: 0.3em;
+  font-size: 0.74rem;
+  color: var(--gold-bright);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.offer-card__price {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(3.8rem, 9vw, 5.4rem);
+  line-height: 1;
+  margin: 12px 0 8px;
+  background: linear-gradient(180deg, #FFF3DC, var(--gold-bright) 60%, #B07C3E);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 10px;
+}
+
+.offer-card__price-prefix {
+  font-family: var(--font-cinzel);
+  font-size: 0.44em;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--gold-bright);
+}
+
+.offer-card__price-curr {
+  font-size: 0.38em;
+  letter-spacing: 0.05em;
+  font-family: var(--font-cinzel);
+}
+
+.offer-card__price-val {
+  font-weight: 600;
+}
+
+.offer-card__pix {
+  font-size: 1.18rem;
+  color: var(--paper);
+  margin: 0 0 14px;
+}
+
+.offer-card__pix strong {
+  color: var(--gold-bright);
+  font-weight: 700;
+}
+
+.offer-card__math {
+  font-size: 0.92rem;
+  color: rgba(250, 246, 240, 0.72);
+  margin: 0 auto 16px;
+  max-width: 480px;
+  line-height: 1.55;
+}
+
+.offer-card__why {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.22rem;
+  line-height: 1.45;
+  color: var(--gold-pale);
+  margin: 0 auto 24px;
+  max-width: 480px;
+}
+
+.offer-card__checks {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  list-style: none;
+  margin-bottom: 26px;
+  flex-wrap: wrap;
+}
+
+.offer-card__checks li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+
+.offer-card__checks svg {
+  width: 18px;
+  height: 18px;
+  color: var(--gold-bright);
+}
+
+.offer-card .btn {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.offer__help {
+  text-align: center;
+  margin-top: 36px;
+  color: rgba(250, 246, 240, 0.7);
+}
+
+.offer__help .btn {
+  margin-top: 16px;
+}
+
+/* Card de encerramento ritualístico pré-FAQ */
+.closing-ritual {
+  margin: 70px auto 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(202, 150, 80, 0.45);
+  box-shadow: 0 32px 80px rgba(20, 4, 7, 0.35);
+  text-align: center;
+  padding: 80px 32px;
+  background: #1B0508;
+}
+
+.closing-ritual__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.closing-ritual__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.72;
+  filter: saturate(1.05) contrast(1.08);
+  display: block;
+}
+
+.closing-ritual__overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(30, 6, 9, 0.55) 0%, rgba(20, 4, 7, 0.94) 100%);
+}
+
+.closing-ritual__content {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.closing-ritual__mandala {
+  width: 64px;
+  height: 64px;
+  color: var(--gold);
+  margin: 0 auto 24px;
+  display: block;
+}
+
+.closing-ritual__quote {
+  font-family: var(--font-display);
+  font-size: clamp(1.45rem, 2.8vw, 2.2rem);
+  color: var(--paper);
+  font-style: italic;
+  line-height: 1.45;
+  margin-bottom: 14px;
+}
+
+.closing-ritual__sub {
+  font-size: 1.05rem;
+  color: var(--gold-bright);
+  letter-spacing: 0.05em;
+  margin-bottom: 32px;
+}

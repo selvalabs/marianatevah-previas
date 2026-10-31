@@ -1,0 +1,22 @@
+/* A centered heading and three aligned editorial statements. */
+#comparacao .veils { max-width: 1200px; margin-inline: auto; }
+#comparacao .veils__header { text-align: center; margin-bottom: clamp(32px, 4vw, 48px); }
+#comparacao .veils__title { max-width: 900px; margin-inline: auto; text-align: center; text-wrap: balance; }
+#comparacao .veils__flow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(24px, 2.6vw, 40px); align-items: stretch; }
+#comparacao .veil-statement { display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 16px; align-content: center; align-items: center; margin: 0; padding: 26px 0; border-top: 1px solid #c79b6255; }
+#comparacao .veil-statement__numeral { font: 400 34px/1.05 "Cormorant Garamond", Georgia, serif; color: #956d39; margin: 0; font-variant-numeric: lining-nums; }
+#comparacao .veil-statement__body { min-width: 0; }
+#comparacao .veil-statement__quote { font-size: clamp(24px, 2vw, 28px); line-height: 1.25; margin: 0; text-wrap: pretty; }
+#comparacao .veils__closure { margin-top: 0; padding-top: 42px; }
+@media (max-width: 900px) {
+  #comparacao .veils__flow { grid-template-columns: minmax(0, 1fr); max-width: 640px; margin-inline: auto; gap: 0; }
+  #comparacao .veil-statement { padding: 24px 0; }
+  #comparacao .veil-statement__quote { font-size: 28px; }
+}
+@media (max-width: 600px) {
+  #comparacao .veils__header { margin-bottom: 30px; }
+  #comparacao .veil-statement { grid-template-columns: 28px minmax(0, 1fr); gap: 14px; padding: 22px 0; }
+  #comparacao .veil-statement__numeral { font-size: 30px; }
+  #comparacao .veil-statement__quote { font-size: 26px; }
+  #comparacao .veils__closure { margin-top: 0; padding-top: 30px; }
+}
