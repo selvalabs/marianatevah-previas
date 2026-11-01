@@ -1,7 +1,7 @@
 {
   "base": "/marianatevah-previas/",
-  "builtAt": "2026-11-01T02:03:24.757Z",
-  "portalSourceCommit": "e6ec25c34788a3a9bff6ebd7719f8a69cae450cd",
+  "builtAt": "2026-11-01T02:36:30.388Z",
+  "portalSourceCommit": "7f5400f23d76ad02d71b1ee4180979e5b792a0a5",
   "versions": [
     {
       "slug": "clara",
@@ -27,7 +27,7 @@
         },
         {
           "file": "src/styles/sky-journey.css",
-          "sha256": "77f1d3eb87ec93412b59457fa2daefb605fa7c3c133c5f6e178b75bd50d26fa5"
+          "sha256": "33cd0eb4cc673c1048fd455d5cf463626eae7d9ecf92545a16a82004ddd9bc33"
         }
       ]
     }

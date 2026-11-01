@@ -19,3 +19,5 @@ O workflow valida PRs e a `main`. A publicação é manual, com uma tag anotada 
 Não há dependências de instalação, banco ou processamento de formulários. A release publicada `v1.0.0-preview.1` permanece como referência para rollback; uma atualização só substitui o site após homologação, merge e publicação por nova tag.
 
 O ajuste da issue #3 dá mais presença ao sol e ao mar na versão `ceu-mar/`, principalmente no celular. O manifesto registra o commit do gerador e os hashes das duas substituições de fonte. Os arquivos das versões clara e escura permanecem idênticos à release anterior. Assets antigos com hash são preservados para cache e reversão e continuam incluídos no inventário de integridade.
+
+Na revisão, as primeiras dobras e os cards recebem camadas mais transparentes. O manifesto fica empilhado em todas as telas, com apresentação menor acima e frase principal maior e centralizada abaixo. A copy permanece integral; os tons do texto preservam a leitura sobre o cenário mais visível.

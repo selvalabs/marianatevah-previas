@@ -6,6 +6,7 @@
     "ceu-mar/_astro/SkyJourney.astro_astro_type_script_index_0_lang.DDnK_pMJ.js": "d24a9066584b6dc4c01ea39878a4a6b0168586d520ef8a03139c3d3c96c0b5b5",
     "ceu-mar/_astro/index.CdFJSM4v.css": "77d5dea756222836447ea45195fd162e78468ca85a71eab76bbd21d9f432c795",
     "ceu-mar/_astro/index.DM8WdgdL.css": "7c8fe36d0f4f4859c246b6b0d82ac350417ad535c1925041fbed534b2036a859",
+    "ceu-mar/_astro/index.DxJEitiV.css": "53cd238ef69dea4186979434eb61b1009457affc1b2ff011490e3846abe476a8",
     "ceu-mar/apple-touch-icon.png": "573196ee2571244ba80c564362a86560bd8241b37ef57f2dee328469fa49c477",
     "ceu-mar/brand-favicon.ico": "be9f6deb301c0fa3c58f9bd12e1ad2f35629e263b75325ec884725766f166682",
     "ceu-mar/brand-favicon.png": "209cc7356ca2dd93f60d2aacca5d70a927025f960482c05c236e1ff62f24f34c",
@@ -76,7 +77,7 @@
     "ceu-mar/images/ocean-horizon-v1.webp": "87293a3deb018801c5416425633858ce537f4af254c2a20c7fb66985f9814b4d",
     "ceu-mar/images/roda-mulheres-720.webp": "753f9b17a4b8c0ac6e8546c05a698af7675f8910264774066d4d9ed357cb4bfc",
     "ceu-mar/images/roda-mulheres.webp": "d07302c2444dc0acbdc0cca2219f4c47df7cd46c496ff2f28860369e79b5d858",
-    "ceu-mar/index.html": "c1e4d89a14608bd1bcc723defd0540ce498711bc3d19e188473d1cf1032deb5c",
+    "ceu-mar/index.html": "272bdc3281dad8e9f0a00ed7b4295133effb6feb70cf2a93341f2f0d1d19e8eb",
     "clara/_astro/Landing.astro_astro_type_script_index_0_lang.xk8QznJa.js": "25c34248a93cdce676dbd004415bde0d4ce372b40333700fb1134ea9b13140b7",
     "clara/_astro/index.CjstoGTy.css": "c504fdedb4328145d3b84995ede534f3b598633ba7dbe79f5e86b00254f80a91",
     "clara/apple-touch-icon.png": "573196ee2571244ba80c564362a86560bd8241b37ef57f2dee328469fa49c477",
@@ -224,6 +225,6 @@
     "escura/images/venus-rosette-generated-b2.webp": "a4a30f6afc1cf9afb82c783792bfef1812be54c0f3674c0275cd4140c60fe118",
     "escura/index.html": "4d4ad8e05d0760616d719eb68e32cecb622fc99b0c0dd71b407d3ea658bf5d7e",
     "index.html": "f09e10631adff59de1603d476c2e2d8f9421b666cc26fc058a7040892d0015fd",
-    "versions-manifest.json": "584ab02567eecfc2290c584ef6957e01414a25f123c8ca6f8bbccc00b66aae56"
+    "versions-manifest.json": "3bdbf8708f41fd82a9e097c06fe8d383119c34d6678d341d8de00aaf728110a8"
   }
 }
