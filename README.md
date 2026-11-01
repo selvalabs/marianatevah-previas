@@ -16,4 +16,6 @@ O verificador usa apenas módulos nativos do Node: confere inventário, SHA-256 
 
 O workflow valida PRs e a `main`. A publicação é manual, com uma tag anotada de um commit aprovado e integrado na `main`. A execução de release confere a tag, SHA, ancestralidade e árvore limpa antes do upload. Criar a tag somente após homologação/merge e preflight; verificar depois o endereço retornado pelo Pages e as três páginas.
 
-Não há dependências de instalação, banco ou processamento de formulários. Primeira publicação: não existe release anterior para rollback. Nas próximas atualizações, preservar e reimplantar a tag anterior aprovada, se necessário.
+Não há dependências de instalação, banco ou processamento de formulários. A release publicada `v1.0.0-preview.1` permanece como referência para rollback; uma atualização só substitui o site após homologação, merge e publicação por nova tag.
+
+O ajuste da issue #3 dá mais presença ao sol e ao mar na versão `ceu-mar/`, principalmente no celular. O manifesto registra o commit do gerador e os hashes das duas substituições de fonte. Os arquivos das versões clara e escura permanecem idênticos à release anterior. Assets antigos com hash são preservados para cache e reversão e continuam incluídos no inventário de integridade.
