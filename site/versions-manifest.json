@@ -1,7 +1,7 @@
 {
   "base": "/marianatevah-previas/",
-  "builtAt": "2026-10-31T17:54:50.446Z",
-  "portalSourceCommit": "a222855e82b799ecb02d5be198fe58d82db30298",
+  "builtAt": "2026-11-01T12:08:47.402Z",
+  "portalSourceCommit": "a765dbc261bbf7975294651329b5cd08a9a50bcb",
   "versions": [
     {
       "slug": "clara",
@@ -19,7 +19,21 @@
       "slug": "ceu-mar",
       "name": "Céu e mar · pôr do sol",
       "contentCommit": "0bb2a36da3d8f67b839a01bc58d7b782de68daf3",
-      "path": "/marianatevah-previas/ceu-mar/"
+      "path": "/marianatevah-previas/ceu-mar/",
+      "overrides": [
+        {
+          "file": "src/scripts/ambient.js",
+          "sha256": "16dcf379d38dfd0d7c5ca161123e467eb7ce0474821c2f14bb6eb42b014c2ee9"
+        },
+        {
+          "file": "src/scripts/sky-journey.ts",
+          "sha256": "fdf5156f2e09e220d73041d6c9c943927e080ff3ed0edf33590b95b5f7067920"
+        },
+        {
+          "file": "src/styles/sky-journey.css",
+          "sha256": "a405921a8393e31aff63f254ffb541927dab94643f2b6bfebc3804177a6cebb3"
+        }
+      ]
     }
   ]
 }
