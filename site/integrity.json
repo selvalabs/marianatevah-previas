@@ -2,8 +2,10 @@
   "algorithm": "sha256",
   "files": {
     ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "ceu-mar/_astro/index.CdFJSM4v.css": "77d5dea756222836447ea45195fd162e78468ca85a71eab76bbd21d9f432c795",
+    "ceu-mar/_astro/SkyJourney.astro_astro_type_script_index_0_lang.BaznwX8U.js": "46933973cc7525bb466fb4cdd2bed6d38d66b5f190fe8303c81b24cb5bdedeec",
     "ceu-mar/_astro/SkyJourney.astro_astro_type_script_index_0_lang.DDnK_pMJ.js": "d24a9066584b6dc4c01ea39878a4a6b0168586d520ef8a03139c3d3c96c0b5b5",
+    "ceu-mar/_astro/index.CdFJSM4v.css": "77d5dea756222836447ea45195fd162e78468ca85a71eab76bbd21d9f432c795",
+    "ceu-mar/_astro/index.DxJEitiV.css": "53cd238ef69dea4186979434eb61b1009457affc1b2ff011490e3846abe476a8",
     "ceu-mar/apple-touch-icon.png": "573196ee2571244ba80c564362a86560bd8241b37ef57f2dee328469fa49c477",
     "ceu-mar/brand-favicon.ico": "be9f6deb301c0fa3c58f9bd12e1ad2f35629e263b75325ec884725766f166682",
     "ceu-mar/brand-favicon.png": "209cc7356ca2dd93f60d2aacca5d70a927025f960482c05c236e1ff62f24f34c",
@@ -56,8 +58,8 @@
     "ceu-mar/fonts/eb-garamond-italic-400-600-latin.woff2": "c664773f7e1d42d36326aa457becf7674236168c74cf7d74e87e5778ef7640f9",
     "ceu-mar/fonts/eb-garamond-normal-400-600-latin.woff2": "88603384163d301aebd5bd769832a8bfe3c9004ec24178417b9817f0ad32c63b",
     "ceu-mar/fonts/ebgaramond-OFL.txt": "0c458bc82985728c01481c0913bec246e5495ef2a857e02f5680c80c8c3dd7c6",
-    "ceu-mar/fonts/montserrat-normal-400-600-latin.woff2": "06b16db7a969135d48d38c49183be7fb88d4452e2a3011957c7851941f4e4879",
     "ceu-mar/fonts/montserrat-OFL.txt": "1326128ea94d4c0940b13ca6c9ad2888fe395ee02d4b0beb4d628f50e84aa427",
+    "ceu-mar/fonts/montserrat-normal-400-600-latin.woff2": "06b16db7a969135d48d38c49183be7fb88d4452e2a3011957c7851941f4e4879",
     "ceu-mar/images/abraco-comunidade-720.webp": "21656440dd35fd0a9961653381bc1711aecc09af0ff43b76c3fee045edafdcac",
     "ceu-mar/images/abraco-comunidade.webp": "398ecf2b757fe61b0599266bff531ad75a5e8638d19e592b9f5960762cba85ec",
     "ceu-mar/images/atmosphere-night-v1.webp": "1848ea599cbb930c4f59e0f158f75e745be0158601cf92fd59c6e40a73407bf1",
@@ -74,9 +76,9 @@
     "ceu-mar/images/ocean-horizon-v1.webp": "87293a3deb018801c5416425633858ce537f4af254c2a20c7fb66985f9814b4d",
     "ceu-mar/images/roda-mulheres-720.webp": "753f9b17a4b8c0ac6e8546c05a698af7675f8910264774066d4d9ed357cb4bfc",
     "ceu-mar/images/roda-mulheres.webp": "d07302c2444dc0acbdc0cca2219f4c47df7cd46c496ff2f28860369e79b5d858",
-    "ceu-mar/index.html": "2873d7967d9e2f379870d50d6dcc91a422c6ad576269a5ef7b18c5c233108d35",
-    "clara/_astro/index.CjstoGTy.css": "c504fdedb4328145d3b84995ede534f3b598633ba7dbe79f5e86b00254f80a91",
+    "ceu-mar/index.html": "4a54dfa5053e9abebe9150e7dca9556d55608449e520d70bb2244631bf068c97",
     "clara/_astro/Landing.astro_astro_type_script_index_0_lang.xk8QznJa.js": "25c34248a93cdce676dbd004415bde0d4ce372b40333700fb1134ea9b13140b7",
+    "clara/_astro/index.CjstoGTy.css": "c504fdedb4328145d3b84995ede534f3b598633ba7dbe79f5e86b00254f80a91",
     "clara/apple-touch-icon.png": "573196ee2571244ba80c564362a86560bd8241b37ef57f2dee328469fa49c477",
     "clara/brand-favicon.ico": "be9f6deb301c0fa3c58f9bd12e1ad2f35629e263b75325ec884725766f166682",
     "clara/brand-favicon.png": "209cc7356ca2dd93f60d2aacca5d70a927025f960482c05c236e1ff62f24f34c",
@@ -138,8 +140,8 @@
     "clara/images/roda-mulheres.webp": "d07302c2444dc0acbdc0cca2219f4c47df7cd46c496ff2f28860369e79b5d858",
     "clara/index.html": "5f8380b077aee35cd85bfc2247e4a7d2c7a895bd10b6166737622c6d73c6f362",
     "concha.webp": "cc2d54bb9237fef5455b5f96946883efba422dae0e8bf00330ad1d9bdca3d49a",
-    "escura/_astro/index.CrAZ7f2N.css": "767ad98312cfe3575c38d61d8d60970b363ec78937b14d3315b803040d1ba347",
     "escura/_astro/Landing.astro_astro_type_script_index_0_lang.D-SW1HPY.js": "8a0e5c6efc48849ea572b86a4180647f3d936d05fb426eae8f1c06f73d43f828",
+    "escura/_astro/index.CrAZ7f2N.css": "767ad98312cfe3575c38d61d8d60970b363ec78937b14d3315b803040d1ba347",
     "escura/apple-touch-icon.png": "a4a7c42d134560f7be160efc1442725466ed2214df95a3dafd47fe4027c22202",
     "escura/brand-favicon.ico": "4fab12c4cbd5d5b9191ab1fcd273500f651a80d32de1af6a42feaf90db17b209",
     "escura/brand-favicon.png": "06144195fb254c7d2c9c6228c289935cd6887a1c0067d9a78742ff6500aa04a9",
@@ -222,6 +224,6 @@
     "escura/images/venus-rosette-generated-b2.webp": "a4a30f6afc1cf9afb82c783792bfef1812be54c0f3674c0275cd4140c60fe118",
     "escura/index.html": "4d4ad8e05d0760616d719eb68e32cecb622fc99b0c0dd71b407d3ea658bf5d7e",
     "index.html": "f09e10631adff59de1603d476c2e2d8f9421b666cc26fc058a7040892d0015fd",
-    "versions-manifest.json": "57aa3b283e83a53495033fc7bf7324b0c1bf8368b0e435a3540718feb1b4c54c"
+    "versions-manifest.json": "0a1de5d57971448781388403087545ea2d332bd9b44d28ff2621f4adfde80ceb"
   }
 }
